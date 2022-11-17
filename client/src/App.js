@@ -17,7 +17,7 @@ function Navigation(props) {
         <ul className="navbar-nav me-auto">
           <li className="nav-item">
             <NavLink className="nav-link" to="/posts/new">
-              Create a Micro Post
+              Create a Post
             </NavLink>
           </li>
           <li className="nav-item">
