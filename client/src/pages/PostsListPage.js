@@ -8,7 +8,7 @@ function PostsListPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  useEffect(() => {
+  /*useEffect(() => {
     async function getData() {
       setLoading(true);
       try {
@@ -30,12 +30,14 @@ function PostsListPage() {
   }, []);
 
   if (error) return <ErrorAlert details="Failed to fetch all micro posts" />;
-  if (loading) return <LoadingSpinner />;
+  if (loading) return <LoadingSpinner />;*/
+  let demoposts = [{content:"hello demo", createdAt:2, id:1 },
+  {content:"hello 2", createdAt:2, id:2 }, {content:"hello 3", createdAt:2, id:3 } ];
 
   return (
     <div className="container-fluid text-center">
       <div className="row justify-content-center">
-        {posts.map((entryData) => (
+        {demoposts.map((entryData) => (
           <MicroPostCard {...entryData} key={entryData.id} />
         ))}
       </div>

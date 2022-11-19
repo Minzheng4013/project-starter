@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+//create micropostcard.css to style each card
 function MicroPostCard({ content, createdAt, id }) {
   return (
     <div className="col-10 col-md-8 col-lg-7">

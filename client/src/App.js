@@ -4,6 +4,7 @@ import PostsListPage from "./pages/PostsListPage";
 import PostFormPage from "./pages/PostFormPage";
 import ShowPostPage from "./pages/ShowPostPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import PostPage from "./components/PostPage";
 
 import "./App.css";
 
@@ -18,6 +19,11 @@ function Navigation(props) {
           <li className="nav-item">
             <NavLink className="nav-link" to="/posts/new">
               Create a Post
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/posts">
+              Post Feed
             </NavLink>
           </li>
           <li className="nav-item">
@@ -38,6 +44,7 @@ function App() {
       <div className="container-xl text-center">
         <div className="row justify-content-center">
           <Routes>
+            <Route path="/posts" element={<PostsListPage />} />
             <Route path="/posts/new" element={<PostFormPage />} />
             <Route path="/posts/:id" element={<ShowPostPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
