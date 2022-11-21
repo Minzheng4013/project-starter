@@ -43,13 +43,14 @@ function App() {
       <Navigation />
       <div className="container-xl text-center">
         <div className="row justify-content-center">
+          <div className={PostsListPage?'PostsListPage':''}>
           <Routes>
             <Route path="/posts" element={<PostsListPage />} />
             <Route path="/posts/new" element={<PostFormPage />} />
             <Route path="/posts/:id" element={<ShowPostPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
-            <Route path="/" element={<PostsListPage />} />
           </Routes>
+          </div>
         </div>
       </div>
     </BrowserRouter>

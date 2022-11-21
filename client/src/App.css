@@ -1,1 +1,8 @@
 /* Add custom CSS here */
+.PostsListPage{
+  background-color:cornflowerblue;
+  padding: 0%;
+  margin: auto 10px;
+    height: 1000px;
+  text-align: center;
+}
