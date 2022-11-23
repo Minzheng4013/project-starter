@@ -34,9 +34,15 @@ function PostsListPage() {
   let demoposts = [{content:"hello demo", createdAt:2, id:1 },
   {content:"hello 2", createdAt:2, id:2 }, {content:"hello 3", createdAt:2, id:3 } ];
 
+  
+
   return (
     <div className="container-fluid text-center">
       <div className="row justify-content-center">
+        <div className="feedTitle">
+        <h1>Your Post Feed</h1>
+        </div>
+      
         {demoposts.map((entryData) => (
           <MicroPostCard {...entryData} key={entryData.id} />
         ))}
