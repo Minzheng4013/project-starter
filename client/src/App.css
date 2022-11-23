@@ -1,17 +1,20 @@
 /* Add custom CSS here */
 .PostsListPage{
-  background-color:cornflowerblue;
-  padding: 20px;
+  background-color:lightblue;
+  padding: 0px;
   height: 1000px;
 }
 
 .feedTitle{
+  background-color:steelblue;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: large;
+  font-size:xx-large;
   text-decoration:underline;
   text-align: center;
   color: azure;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-bottom: 30px;
 }
 
 

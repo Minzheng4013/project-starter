@@ -7,6 +7,7 @@ import AboutUsPage from "./pages/AboutUsPage";
 import PostPage from "./components/PostPage";
 
 import "./App.css";
+import "./MicroPostCard.css";
 
 function Navigation(props) {
   return (
