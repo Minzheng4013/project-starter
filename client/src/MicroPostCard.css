@@ -1,6 +1,28 @@
+
+
 .card{
   background-color:cornsilk;
   text-align: justify;
   color: black;
   
+}
+
+.like-btn{
+  position:relative;
+}
+
+.content{
+  padding: 2px 6px;
+  display: flex;
+  cursor: pointer;
+
+}
+
+button{
+  border-color: rgb(143, 183, 223);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: "Comic Sans MS", "Comic Sans";
+  color: rgb(129, 172, 215);
+  font-weight: bold;
 }

@@ -8,7 +8,7 @@ function PostsListPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  /*useEffect(() => {
+   /*useEffect(() => {
     async function getData() {
       setLoading(true);
       try {
@@ -17,8 +17,10 @@ function PostsListPage() {
         setPosts(allPosts);
         setLoading(false);
       } catch (error) {
+        <div id="postError">
         console.error("Error fetching all micro_posts", error);
         setError(true);
+        </div>
       }
     }
 
@@ -31,6 +33,7 @@ function PostsListPage() {
 
   if (error) return <ErrorAlert details="Failed to fetch all micro posts" />;
   if (loading) return <LoadingSpinner />;*/
+
   let demoposts = [{content:"hello demo", createdAt:2, id:1 },
   {content:"hello 2", createdAt:2, id:2 }, {content:"hello 3", createdAt:2, id:3 } ];
 
@@ -43,7 +46,7 @@ function PostsListPage() {
         <h1>Your Post Feed</h1>
         </div>
       
-        {demoposts.map((entryData) => (
+        {demoposts/*posts*/.map((entryData) => (
           <MicroPostCard {...entryData} key={entryData.id} />
         ))}
       </div>

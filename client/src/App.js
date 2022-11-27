@@ -6,8 +6,11 @@ import ShowPostPage from "./pages/ShowPostPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import PostPage from "./components/PostPage";
 
+
 import "./App.css";
 import "./MicroPostCard.css";
+import "./PostFormPage.css";
+
 
 function Navigation(props) {
   return (
