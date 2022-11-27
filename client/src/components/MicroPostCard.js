@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import cn from "classnames";
 
 //import {Date} from "prismic-react"
 //import { RichText, Date } from 'react-router-dom';
@@ -7,7 +8,7 @@ import { Link } from "react-router-dom";
 
 //create micropostcard.css to style each card
 function MicroPostCard({ content, createdAt, id }) {
-  const [counter, setCount] = useState(0);
+  const [like, setCount, setClicked, click, num, setNum] = useState(0);
   return (
 
     createdAt= new Date(),
@@ -23,13 +24,22 @@ function MicroPostCard({ content, createdAt, id }) {
         </div>
         <div className="card-footer small text-muted text-end">{createdAt.toLocaleString()/*createdAt*/}</div>
 
-        <div className="like-btn">
-          <div className="content">
-            <button onClick={() => setCount(counter+1)}>Like {counter}</button>
-          </div>
+          <button
+            onClick={() => {setCount(!like);
+           
+           setClicked(like+1)}}
+            onAnimationEnd={() => setClicked(0)}
+            className={cn("like-wrapper", {like,click,})}
+            >
+            <div className="like">
+              <span>Like</span>
+              <span className={cn("suffix", {like})}>d!</span>
+            </div>
+          </button>
+          <label className="num-likes"
+          onClick={() => {setCount(like+1)}}>{like}</label>
         </div>
       </div>
-    </div>
   );
 }
 
