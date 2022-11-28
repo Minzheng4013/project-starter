@@ -9,7 +9,7 @@
 
 .like-wrapper{
   position:relative;
-  margin-right: 220px;
+  margin-right: 280px;
   left: 0;
   right: 0;
   top: 0;
@@ -65,8 +65,8 @@
 .num-likes{
   color: black;
   position:relative;
-  margin-right: 220px;
-  padding-left: 106px;
+  margin-right: 280px;
+  padding-left: 140px;
   left: 0;
   right: 0;
   top: 0;
