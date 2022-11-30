@@ -34,8 +34,8 @@ function PostsListPage() {
   if (error) return <ErrorAlert details="Failed to fetch all micro posts" />;
   if (loading) return <LoadingSpinner />;*/
 
-  let demoposts = [{content:"hello demo", createdAt:2, id:1 },
-  {content:"hello 2", createdAt:2, id:2 }, {content:"hello 3", createdAt:2, id:3 } ];
+  let demoposts = [{content:"post #1 demo", createdAt:2, id:1 },
+  {content:"post #2 demo", createdAt:2, id:2 }, {content:"post #3 demo", createdAt:2, id:3 } ];
 
   
 
