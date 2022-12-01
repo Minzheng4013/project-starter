@@ -9,7 +9,7 @@
 
 .like-wrapper{
   position:relative;
-  margin-right: 280px;
+  margin-right: 480px;
   left: 0;
   right: 0;
   top: 0;
@@ -25,9 +25,7 @@
   font-weight: bold;
 }
 
-.like::before{
-  background-color: rgb(143, 183, 223);
-}
+
 
 .suffix{
   opacity: 0;
@@ -63,10 +61,12 @@
 }
 
 .num-likes{
-  color: black;
+  color:aliceblue;
   position:relative;
-  margin-right: 280px;
-  padding-left: 140px;
+  display: flex;
+  margin-right: 480px;
+  padding: 2px 6px;
+  padding-left: 55px;
   left: 0;
   right: 0;
   top: 0;

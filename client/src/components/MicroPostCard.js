@@ -8,7 +8,10 @@ import cn from "classnames";
 
 //create micropostcard.css to style each card
 function MicroPostCard({ content, createdAt, id }) {
-  const [like, setCount, setClicked, click, num, setNum] = useState(0);
+  const [like, setCount, setClicked, click, incrementLikes] = useState(0);
+
+  
+
   return (
 
     createdAt= new Date(),
@@ -25,9 +28,11 @@ function MicroPostCard({ content, createdAt, id }) {
         <div className="card-footer small text-muted text-end">{createdAt.toLocaleString()/*createdAt*/}</div>
 
           <button
-            onClick={() => {setCount(!like);
-           
-           setClicked(like+1)}}
+            onClick={() => {
+              setCount(!like);
+              setCount(like+1);
+              setClicked(like);
+          }}
             onAnimationEnd={() => setClicked(0)}
             className={cn("like-wrapper", {like,click,})}
             >
@@ -36,8 +41,7 @@ function MicroPostCard({ content, createdAt, id }) {
               <span className={cn("suffix", {like})}>d!</span>
             </div>
           </button>
-          <label className="num-likes"
-          onClick={() => {setCount(like+1)}}>{like}</label>
+          <label className="num-likes">{like}</label>
         </div>
       </div>
   );
