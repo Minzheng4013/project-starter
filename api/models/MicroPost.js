@@ -13,6 +13,9 @@ module.exports = (sequelize, DataTypes) => {
           notEmpty: true,
         },
       },
+      likes_id: {
+        type: DataTypes.INTEGER,
+      },
     },
     {
       sequelize,

@@ -8,7 +8,7 @@ const { MicroPost } = db;
 // a resource/model. It provides the following:
 //    GET    /api/micro_posts
 //    POST   /api/micro_posts
-//    GET    /api/micro_posts/:id
+//    GET    /api/micro_posts/:id  Ex:http://localhost:8080/api/micro_posts/1
 //    PUT    /api/micro_posts/:id
 //    DELETE /api/micro_posts/:id
 //
@@ -21,7 +21,7 @@ router.get("/", (req, res) => {
   MicroPost.findAll({}).then((allPosts) => res.json(allPosts));
 });
 
-router.post("/", passport.isAuthenticated(), (req, res) => {
+router.post("/", (req, res) => {
   let { content } = req.body;
 
   MicroPost.create({ content })
@@ -41,6 +41,53 @@ router.get("/:id", (req, res) => {
     }
 
     res.json(mpost);
+  });
+});
+
+router.get("/totalLikes/:id", (req, res) => {
+  const { id } = req.params;
+  MicroPost.findByPk(id).then((mpost) => {
+    if (!mpost) {
+      return res.sendStatus(404);
+    }
+
+    res.json(mpost.likes_id);
+  });
+});
+
+router.put("/incrementLikes/:id", (req, res) => {
+  const { id } = req.params;
+  MicroPost.findByPk(id).then((mpost) => {
+    if (!mpost) {
+      return res.sendStatus(404);
+    }
+    mpost.likes_id++; 
+    mpost
+      .save()
+      .then((updatedPost) => {
+        res.json(updatedPost);
+      })
+      .catch((err) => {
+        res.status(400).json(err);
+      });
+  });
+});
+
+router.put("/decrementLikes/:id", (req, res) => {
+  const { id } = req.params;
+  MicroPost.findByPk(id).then((mpost) => {
+    if (!mpost) {
+      return res.sendStatus(404);
+    }
+    mpost.likes_id--; 
+    mpost
+      .save()
+      .then((updatedPost) => {
+        res.json(updatedPost);
+      })
+      .catch((err) => {
+        res.status(400).json(err);
+      });
   });
 });
 
