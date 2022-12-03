@@ -1,15 +1,14 @@
 /* Add custom CSS here */
 .PostsListPage{
-  background-color:rgb(143, 183, 223);
+  background: linear-gradient(rgb(89,142,197),rgb(148,194,227),rgb(192,219,242));
   padding: 0px;
   height: 1000px;
 }
 
 .feedTitle{
-  background-color:steelblue;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: rgb(87, 137, 187);
+  font-family:'League Script';
   font-size:xx-large;
-  text-decoration:underline;
   text-align: center;
   color: azure;
   padding-bottom: 15px;

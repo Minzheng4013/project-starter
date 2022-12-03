@@ -30,7 +30,7 @@ function MicroPostCard({ content, createdAt, id }) {
           <button
             onClick={() => {
               setCount(!like);
-              setCount(like+1);
+              {/*setCount(like+1);*/}
               setClicked(like);
           }}
             onAnimationEnd={() => setClicked(0)}
@@ -41,7 +41,7 @@ function MicroPostCard({ content, createdAt, id }) {
               <span className={cn("suffix", {like})}>d!</span>
             </div>
           </button>
-          <label className="num-likes">{like}</label>
+          {/*<label className="num-likes">{like}</label>*/}
         </div>
       </div>
   );

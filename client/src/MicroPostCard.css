@@ -4,6 +4,7 @@
   background-color:cornsilk;
   text-align: justify;
   color: black;
+  font-family: 'League Script';
   
 }
 
@@ -20,7 +21,7 @@
   border-color: rgb(143, 183, 223);
   border-radius: 8px;
   font-size: 15px;
-  font-family: "Comic Sans MS", "Comic Sans";
+  font-family: 'League Script';
   color: whitesmoke;
   font-weight: bold;
 }
@@ -36,6 +37,8 @@
 .like{
   opacity: 1;
   transform: translateX(0);
+  position: relative;
+  text-align: center;
 }
 
 .click{
