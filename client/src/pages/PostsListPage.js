@@ -37,19 +37,35 @@ function PostsListPage() {
   let demoposts = [{content:"post #1 demo", createdAt:2, id:1 },
   {content:"post #2 demo", createdAt:2, id:2 }, {content:"post #3 demo", createdAt:2, id:3 } ];
 
-  
+  let [count,setClick] = useState(0);
 
   return (
     <div className="container-fluid text-center">
       <div className="row justify-content-center">
         <div className="feedTitle">
-        <h1>Your Post Feed</h1>
+        {/*<h1>Your Post Feed</h1>*/}
         </div>
-      
-        {demoposts/*posts*/.map((entryData) => (
+        
+        <div className="row">
+          <div className="col-2">
+            fnfjnjnfnfencvjinvcjsdnjdnf
+          </div>
+          <div className="col-8">
+          {demoposts/*posts*/.map((entryData) => (
           <MicroPostCard {...entryData} key={entryData.id} />
         ))}
+          </div>
+          <div className="col-2">
+            cdcdjfbdjbdsndnfnfnfknfkonfon
+          </div>
+
+        </div>
+       
+        
       </div>
+
+      
+
     </div>
   );
 }

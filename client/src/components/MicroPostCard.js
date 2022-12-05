@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import cn from "classnames";
+import Comments from '../components/Comments';
 
 //import {Date} from "prismic-react"
 //import { RichText, Date } from 'react-router-dom';
@@ -18,7 +19,7 @@ function MicroPostCard({ content, createdAt, id }) {
     //createdAt = Date(document.data.event_date).toString(),
     
 
-    <div className="col-10 col-md-8 col-lg-7">
+    <div className="col-lg">
       <div className="card mb-4 shadow">
         <div className="card-body card-text color:black">
           <div className="card">
@@ -42,7 +43,15 @@ function MicroPostCard({ content, createdAt, id }) {
             </div>
           </button>
           {/*<label className="num-likes">{like}</label>*/}
+
+          <div>
+            <Comments currentId="1"/>
+          </div>
+
         </div>
+
+          
+
       </div>
   );
 }

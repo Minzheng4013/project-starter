@@ -10,14 +10,19 @@
 
 .like-wrapper{
   position:relative;
-  margin-right: 480px;
+  margin:auto;
+  text-align: center;
+  /* padding-left: 245px; */
+  /* padding-right: 245px; */
+  padding-left: 6rem;
+  padding-right: 6rem;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   will-change: background-color;
   transition:background-color 0.3s, transform 0.3s;
-  background-color: rgb(86, 170, 255);
+  background: linear-gradient(rgb(89,142,197),rgb(154, 197, 235));
   border-color: rgb(143, 183, 223);
   border-radius: 8px;
   font-size: 15px;
