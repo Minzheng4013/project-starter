@@ -10,7 +10,7 @@ const { MicroPost } = db;
 //    POST   /api/micro_posts
 //    GET    /api/micro_posts/:id  Ex:http://localhost:8080/api/micro_posts/1
 //    PUT    /api/micro_posts/:id
-//    DELETE /api/micro_posts/:id
+//    DELETE /api/micro_posts/:id Ex:http://localhost:8080/api/micro_posts/totalLikes/1
 //
 // The full URL's for these routes are composed by combining the
 // prefixes used to load the controller files.
