@@ -2,37 +2,33 @@
 const { Model } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
-  class MicroPost extends Model {}
+  class Comment extends Model {}
 
-  MicroPost.init(
+  Comment.init(
     {
-      content: {
+      comment_content: {
         type: DataTypes.STRING,
         validate: {
           len: [3, 250],
           notEmpty: true,
         },
-      },
-      likes_id: {
-        type: DataTypes.INTEGER,
-      },
+      }
     },
     {
       sequelize,
-      modelName: "MicroPost",
+      modelName: "Comment",
     }
   );
 
-  MicroPost.associate = (models) => {
+  Comment.associate = (models) => {
     // associations can be defined here
-    MicroPost.hasMany(models.Comment, {
+    Comment.belongsTo(models.MicroPost, {
       foreignKey: {
         type: DataTypes.INTEGER,
         allowNull: false
-      },
-      onDelete: 'CASCADE'
+      }
     });
   };
 
-  return MicroPost;
+  return Comment;
 };
