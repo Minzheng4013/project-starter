@@ -2,11 +2,11 @@ const express = require("express");
 const passport = require("../middlewares/authentication");
 const router = express.Router();
 const db = require("../models");
-const { MicroPost } = db;
+const { Comment } = db;
 
 // This is a simple example for providing basic CRUD routes for
 // a resource/model. It provides the following:
-//    GET    /api/micro_posts
+//    GET    /api/comment_posts
 //    POST   /api/micro_posts
 //    GET    /api/micro_posts/:id  Ex:http://localhost:8080/api/micro_posts/1
 //    PUT    /api/micro_posts/:id
@@ -18,13 +18,14 @@ const { MicroPost } = db;
 //    /micro_posts comes from the file ./microPosts.js
 
 router.get("/", (req, res) => {
-  MicroPost.findAll({}).then((allPosts) => res.json(allPosts));
+  Comment.findAll({}).then((allPosts) => res.json(allPosts));
 });
 
 router.post("/", (req, res) => {
-  let { content } = req.body;
+  let { comment_content } = req.body;
+  let { post_id } = req.body.post_id;
 
-  MicroPost.create({ content })
+  Comment.create({ comment_content, post_id })
     .then((newPost) => {
       res.status(201).json(newPost);
     })
@@ -34,8 +35,8 @@ router.post("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  const { id } = req.params;
-  MicroPost.findByPk(id).then((mpost) => {
+  const { comment_id } = req.params;
+  Comment.findByPk(comment_id).then((mpost) => {
     if (!mpost) {
       return res.sendStatus(404);
     }
@@ -44,56 +45,9 @@ router.get("/:id", (req, res) => {
   });
 });
 
-router.get("/totalLikes/:id", (req, res) => {
-  const { id } = req.params;
-  MicroPost.findByPk(id).then((mpost) => {
-    if (!mpost) {
-      return res.sendStatus(404);
-    }
-
-    res.json(mpost.likes_id);
-  });
-});
-
-router.put("/incrementLikes/:id", (req, res) => {
-  const { id } = req.params;
-  MicroPost.findByPk(id).then((mpost) => {
-    if (!mpost) {
-      return res.sendStatus(404);
-    }
-    mpost.likes_id++; 
-    mpost
-      .save()
-      .then((updatedPost) => {
-        res.json(updatedPost);
-      })
-      .catch((err) => {
-        res.status(400).json(err);
-      });
-  });
-});
-
-router.put("/decrementLikes/:id", (req, res) => {
-  const { id } = req.params;
-  MicroPost.findByPk(id).then((mpost) => {
-    if (!mpost) {
-      return res.sendStatus(404);
-    }
-    mpost.likes_id--; 
-    mpost
-      .save()
-      .then((updatedPost) => {
-        res.json(updatedPost);
-      })
-      .catch((err) => {
-        res.status(400).json(err);
-      });
-  });
-});
-
 router.put("/:id", passport.isAuthenticated(), (req, res) => {
   const { id } = req.params;
-  MicroPost.findByPk(id).then((mpost) => {
+  Comment.findByPk(id).then((mpost) => {
     if (!mpost) {
       return res.sendStatus(404);
     }
@@ -112,7 +66,7 @@ router.put("/:id", passport.isAuthenticated(), (req, res) => {
 
 router.delete("/:id", passport.isAuthenticated(), (req, res) => {
   const { id } = req.params;
-  MicroPost.findByPk(id).then((mpost) => {
+  Comment.findByPk(id).then((mpost) => {
     if (!mpost) {
       return res.sendStatus(404);
     }
