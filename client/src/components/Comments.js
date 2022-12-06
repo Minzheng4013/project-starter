@@ -35,14 +35,14 @@ import CommentForm from './CommentForm';
 
   return (
     <div className='comments'>
-      <label className='comment-title'>Comments</label>
-      <div className='comment-form-title'>Write Comment</div>
+      
+      {/*<div className='comment-form-title'>Write Comment</div>*/}
       <CommentForm submitLabel="write" handleSubmit={addComment}/>
       <div className='comments-container'>
         {rootComments.map((rootComment) => (
           <Comments key={rootComment.id} comments={rootComment} replies={getReplies(rootComment.id)}
           currentUserId={currentId}
-          deleteComment={deleteComment};
+          deleteComment={deleteComment}
           />
         ))}
 

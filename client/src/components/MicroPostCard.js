@@ -45,7 +45,9 @@ function MicroPostCard({ content, createdAt, id }) {
           {/*<label className="num-likes">{like}</label>*/}
 
           <div>
+          <label className='comment-title medium text-muted text-end'>Comments</label>
             <Comments currentId="1"/>
+            
           </div>
 
         </div>

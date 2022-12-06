@@ -86,3 +86,9 @@
   font-family: "Comic Sans MS", "Comic Sans";
   font-weight: bold;
 }
+
+.comment-title{
+  text-align: center;
+  color: black;
+  font-family: 'League Script';
+}

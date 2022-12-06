@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./CommentForm.css";
 
 const CommentForm = ({handleSubmit, submitLabel}) =>{
   const [text, setText] = useState('');
@@ -6,10 +7,12 @@ const CommentForm = ({handleSubmit, submitLabel}) =>{
     event.preventDefault()
     handleSubmit(text);
   }
+  submitLabel = "Write";
 
   return(
     <form onSubmit={onSubmit}>
-      <textarea className="comment-form-textarea" value={text}
+      <textarea className="comment-form-textarea" type="text"
+            placeholder="Add a comment here..." value={text}
       onChange={(e) => setText(e.target.value)}>
       </textarea>
       <button className="comment-form-button">{submitLabel}</button>

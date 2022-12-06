@@ -1,0 +1,27 @@
+form{
+  width: 100px;
+  padding-left: 3rem;
+  text-align: left;
+  font-family: 'League Script';
+}
+
+input{
+  color: grey;
+}
+
+.comment-form-textarea{
+  width: 500px;
+  
+}
+
+.comment-form-button{
+  will-change: background-color;
+  transition:background-color 0.3s, transform 0.3s;
+  background: linear-gradient(rgb(89,142,197),rgb(154, 197, 235));
+  border-color: rgb(143, 183, 223);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'League Script';
+  color: whitesmoke;
+  font-weight: bold;
+}
