@@ -4,7 +4,7 @@ const CommentForm = ({handleSubmit, submitLabel}) =>{
   const [text, setText] = useState('');
   const onSubmit = event => {
     event.preventDefault()
-    handleSubmit(text)
+    handleSubmit(text);
   }
 
   return(
