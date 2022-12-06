@@ -1,8 +1,8 @@
 function Join(){
     return (
-        <div class="text-center bg-light community-box">
-            <div class="heading-60">Join our Community Today</div>
-            <button>Login</button>
+        <div class="text-center community-box">
+            <div className="heading-60 ending">Join our Community Today</div>
+            <button className="buttonend">Login</button>
         </div>
     )
 }

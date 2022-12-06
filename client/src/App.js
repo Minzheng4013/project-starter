@@ -4,9 +4,9 @@ import PostsListPage from "./pages/PostsListPage";
 import PostFormPage from "./pages/PostFormPage";
 import ShowPostPage from "./pages/ShowPostPage";
 import AboutUsPage from "./pages/AboutUsPage";
-
+import Homepage from "./pages/homepage/Homepage"
 import "./App.css";
-
+// import Login from "./pages/loginpage/Login"
 function Navigation(props) {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3">
@@ -34,17 +34,20 @@ function Navigation(props) {
 function App() {
   return (
     <BrowserRouter>
-      <Navigation />
-      <div className="container-xl text-center">
-        <div className="row justify-content-center">
+      {/* <Navigation /> */}
+      {/* <div className="container-xl text-center">
+        <div className="row justify-content-center"> */}
           <Routes>
             <Route path="/posts/new" element={<PostFormPage />} />
             <Route path="/posts/:id" element={<ShowPostPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/" element={<PostsListPage />} />
+            <Route path="/home" element={<Homepage />} />
+            {/* <Route path="/login" element={<Login />} /> */}
+            
           </Routes>
-        </div>
-      </div>
+        {/* </div>
+      </div> */}
     </BrowserRouter>
   );
 }
