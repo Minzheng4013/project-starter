@@ -18,7 +18,7 @@ padding: 50px 10px;
   /* text-align:center; */
   /* font-family: Roboto; */
   /* font-family: 'Petit Formal Script', cursive; */
-  font-family: 'League Script', cursive;
+  /* font-family: 'League Script'; */
   background: -webkit-linear-gradient(rgb(32, 24, 16), rgb(42, 103, 216),rgb(230, 73, 73));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -68,7 +68,7 @@ padding: 50px 10px;
 }
 
 .login-p{
-  font-family: Roboto;
+  font-family: Roboto !important;
   font-size: 26px;
 
 }
@@ -90,7 +90,7 @@ padding: 50px 10px;
 }
 
 .login-h{
-  font-family: 'Petit Formal Script';
+  /* font-family: 'Petit Formal Script'; */
   /* font-weight: bold; */
 }
 

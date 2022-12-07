@@ -26,7 +26,7 @@
   .register-title{
     color: black;
     font-size: xx-large;
-    font-family: 'Petit Formal Script', cursive;
+    font-family: cursive !important;
      /* font-weight: bold; */
     background: -webkit-linear-gradient(rgb(32, 24, 16), rgb(42, 103, 216),rgb(108, 101, 101));
     -webkit-background-clip: text;
@@ -62,7 +62,7 @@
   .register-labels{
     font-family: cursive !important;
     font-size: large;
-    text-align: left !important;
+    /* text-align: left !important; */
     font-weight: lighter;
   }
   
