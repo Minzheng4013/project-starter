@@ -1,0 +1,96 @@
+.card{
+  background-color:cornsilk;
+  text-align: justify;
+  color: black;
+  font-family: 'League Script';
+  
+}
+
+
+.like-wrapper{
+  position:relative;
+  margin:auto;
+  text-align: center;
+  /* padding-left: 245px; */
+  /* padding-right: 245px; */
+  padding-left: 6rem;
+  padding-right: 6rem;
+  margin-top: 15px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  will-change: background-color;
+  transition:background-color 0.3s, transform 0.3s;
+  background: linear-gradient(rgb(89,142,197),rgb(154, 197, 235));
+  border-color: rgb(143, 183, 223);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'League Script';
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+
+
+.suffix{
+  opacity: 0;
+  transition:opacity 300ms, transform 300ms;
+  transform: translate(15px);
+}
+
+.like{
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+  text-align: center;
+
+}
+
+.click{
+  animation: click 300ms;
+}
+
+@keyframes click{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(0.96);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.content{
+  padding: 2px 6px;
+  display: flex;
+  cursor: pointer;
+}
+
+.num-likes{
+  color:aliceblue;
+  position:relative;
+  display: flex;
+  margin-right: 480px;
+  padding: 2px 6px;
+  padding-left: 55px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgb(118, 166, 214);
+  border-radius: 8px;
+  border-color: rgb(118, 166, 214);
+  font-size: 15px;
+  font-family: "Comic Sans MS", "Comic Sans";
+  font-weight: bold;
+}
+
+.comment-title{
+  text-align: center;
+  color: black;
+  font-family: 'League Script';
+  padding-left: 10px;
+}

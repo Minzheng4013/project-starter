@@ -39,21 +39,23 @@ function PostFormPage() {
   if (success) return <Navigate to="/" />;
 
   return (
-    <div className="col-10 col-md-8 col-lg-7">
+    <div className="d-flex flex-row justify-content-center">
       {error && <ErrorAlert details={"Failed to save the content"} />}
       <form onSubmit={handleSubmit}>
         <div className="input-group">
-          <input
+          <input  
             type="text"
-            placeholder="Add your words of wisdom here..."
+            placeholder="Add a post here..."
             value={content}
-            className="form-control"
+            className="form-control flex-grow"
             onChange={handleContentChange}
             autoFocus
           />
-          <button type="submit" className="btn btn-primary">
-            Save Post
-          </button>
+          <div className="postFormButton">
+            <button type="submit" className="btn btn-primary">
+              Post
+            </button>
+          </div>
         </div>
       </form>
     </div>

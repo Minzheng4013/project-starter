@@ -10,7 +10,7 @@ function ShowPostPage() {
   const [error, setError] = useState(false);
   let params = useParams();
 
-  useEffect(() => {
+  /*useEffect(() => {
     async function getData() {
       setLoading(true);
       try {
@@ -23,21 +23,20 @@ function ShowPostPage() {
         setError(true);
       }
     }
-
     getData();
-
     return () => {
       // clean up function
     };
   }, [params.id]);
-
   if (error)
     return (
       <ErrorAlert details={"Micro post with id=" + params.id + " not found"} />
     );
-  if (loading) return <LoadingSpinner />;
+  if (loading) return <LoadingSpinner />;*/
 
-  return <MicroPostCard {...post} />;
+  //return <MicroPostCard {...post} />;
+  let demopost = {content:"hello demo", createdAt:2, id:2 };
+  return <MicroPostCard {...demopost}/>;
 }
 
 export default ShowPostPage;

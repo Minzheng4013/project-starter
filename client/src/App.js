@@ -4,12 +4,17 @@ import PostsListPage from "./pages/PostsListPage";
 import PostFormPage from "./pages/PostFormPage";
 import ShowPostPage from "./pages/ShowPostPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import PostPage from "./components/PostPage";
+
 
 import "./App.css";
+import "./MicroPostCard.css";
+import "./PostFormPage.css";
+
 
 function Navigation(props) {
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           Micro Blog
@@ -17,7 +22,12 @@ function Navigation(props) {
         <ul className="navbar-nav me-auto">
           <li className="nav-item">
             <NavLink className="nav-link" to="/posts/new">
-              Create a Micro Post
+              Create a Post
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/posts">
+              Post Feed
             </NavLink>
           </li>
           <li className="nav-item">
@@ -37,12 +47,14 @@ function App() {
       <Navigation />
       <div className="container-xl text-center">
         <div className="row justify-content-center">
+          <div className={PostsListPage?'PostsListPage':''}>
           <Routes>
+            <Route path="/posts" element={<PostsListPage />} />
             <Route path="/posts/new" element={<PostFormPage />} />
             <Route path="/posts/:id" element={<ShowPostPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
-            <Route path="/" element={<PostsListPage />} />
           </Routes>
+          </div>
         </div>
       </div>
     </BrowserRouter>

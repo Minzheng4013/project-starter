@@ -1,0 +1,118 @@
+.bar-title{
+  font-family:'League Script';
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+  transform: translateY(5px);
+  font-size: calc(1.275rem + .3vw)!important;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  color:black;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-align: center;
+  padding-left: 13px;
+}
+
+.side-bar-title{
+  border-color:black;
+}
+
+
+
+.side-bar{
+  background-color:rgb(230, 227, 208);
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.nav-title{
+  margin-bottom:30px;
+}
+
+/*button{
+  margin-bottom: 35px;
+  margin-top: 20px;
+  background: linear-gradient(rgb(89,142,197),rgb(143, 188, 226));
+  border-color: rgb(143, 183, 223);
+  border-radius: 8px;
+  color: white;
+  font-family: 'League Script';
+  text-decoration-line:underline;
+  font-weight: 600;
+}*/
+
+.nav-pills .nav-link{
+  background: 0.0;
+  border: 0;
+  border-radius: var(--bs-nav-pills-border-radius);
+  color:rgb(96, 168, 227);
+  font-family:'League Script';
+  font-size: large;
+  font-weight:bold;
+  margin-top: 25px;
+  padding: 15px;
+  /*filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+  transform: translateY(5px);*/
+  box-shadow: inset 0px 2px 4px rgba(0,0,0,0.15), 
+              inset 0px 4px 8px rgba(0,0,0,0.15), 
+              inset 0px 8px 16px rgba(0,0,0,0.15);
+  transition: 0.2s;
+  transform: translateY(2px);
+  width: 100%;
+  scroll-behavior: smooth;
+  
+}
+
+.nav-link{
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+ul{
+  list-style-type: disc;
+}
+
+li{
+  text-align: center;
+  
+}
+
+
+.link-dark{
+  color: #212529!important;
+}
+
+.settings{
+  margin-bottom: 50px;
+}
+
+.dropdown{
+  background: 0.0;
+  border: 0;
+  border-radius: var(--bs-nav-pills-border-radius);
+  color:rgb(96, 168, 227);
+  font-family:'League Script';
+  font-size: large;
+  font-weight:bold;
+  margin-top: 25px;
+  padding: 15px;
+  /*filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+  transform: translateY(5px);*/
+  box-shadow: inset 0px 2px 4px rgba(0,0,0,0.15), 
+              inset 0px 4px 8px rgba(0, 0, 0, 0.15), 
+              inset 0px 8px 16px rgba(0,0,0,0.15);
+  transition: 0.2s;
+  transform: translateY(2px);
+  width: 100%;
+  scroll-behavior: smooth;
+  
+}
+
+.chat{
+  color:rgb(96, 168, 227);
+  font-family:'League Script';
+  font-weight:bold;
+}
+
