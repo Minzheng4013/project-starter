@@ -1,7 +1,7 @@
-function Welcome() {
+function Welcome(props) {
   return (
-    <div className="welcome-box">
-      <div className="welcome-text bg-opacity-75">Welcome to Mental Support!</div>
+    <div ref={props.myRef} className="home-welcome-box">
+      <div  className="home-welcome-text bg-opacity-75">Welcome to MenSense!</div>
     </div>
   );
 }

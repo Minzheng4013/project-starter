@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+login-h3{
+  font-family: Roboto;
+  font-size: 40px;
+}
+
+.login-container{
+width: 400px;
+/* background-color: rgba(52, 134, 201,0.5); */
+ background: linear-gradient(rgb(234,238,249),rgb(192,219,242),rgb(148,194,227));
+/* top botn left right */
+padding: 50px 10px;
+}
+
+.login-title{
+  color: black;
+  font-size:40px;
+  /* text-align:center; */
+  /* font-family: Roboto; */
+  /* font-family: 'Petit Formal Script', cursive; */
+  font-family: 'League Script', cursive;
+  background: -webkit-linear-gradient(rgb(32, 24, 16), rgb(42, 103, 216),rgb(230, 73, 73));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: bolder;
+}
+
+.login-btnclass{
+  background-color: rgb(89,142,197);
+  font-family: Roboto;
+  height: 35px;
+  width: 50%;
+  border-radius: 20px;
+  border: solid 1px;
+  opacity: 0.8;
+  font-weight: bold;  
+  font-size: large;
+}
+
+.login-pic{
+  border-image-repeat:  stretch;
+}
+.underclass{
+  text-decoration: underline ;
+
+}
+
+.login-box{
+  text-align:center;
+  margin:0 auto;
+  width: fit-content;
+  display: flex;
+  margin-top: 150px;
+
+}
+
+.login-body{
+  /* background: linear-gradient(rgb(21, 27, 33),rgb(27, 87, 206)); */
+  font-family: Roboto;
+  /* height: 100%; */
+  background: linear-gradient(rgb(89,142,197),rgb(148,194,227),rgb(192,219,242));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.login-input{
+   font-family: Roboto Arial, Helvetica, sans-serif;
+}
+
+.login-p{
+  font-family: Roboto;
+  font-size: 26px;
+
+}
+
+.login-label{
+  font-size: 20px;
+} 
+
+/* input inide the p */
+.login-p .login-input{
+  height: 35px;
+  width:50%
+}
+
+.login-picture{
+  width: 600px;
+  height: 500px;
+  opacity: 0.6;
+}
+
+.login-h{
+  font-family: 'Petit Formal Script';
+  /* font-weight: bold; */
+}
+
+.login-title1{
+  font-family: 'League Script';
+  background: -webkit-linear-gradient(rgb(13, 41, 70),rgb(31, 50, 63),rgb(44, 90, 130));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: bolder;
+}
+
+
