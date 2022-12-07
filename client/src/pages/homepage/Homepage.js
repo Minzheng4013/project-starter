@@ -8,6 +8,16 @@ import Welcome from "./components/Welcome.js";
 import './hp.css'
 
 function Homepage() {
+  // add styles to body only for the home page
+  useEffect(()  => {
+    document.body.classList.add('home-body');
+
+    return () => {
+        document.body.classList.remove('home-body');
+    };
+  });
+
+  // for scrolling when you click on navbar items, doesn't work so far
   let refs = {
     homeRef: useRef(null),
     welcomeRef: useRef(null),
@@ -21,8 +31,6 @@ function Homepage() {
   //   executeScroll = () => refs.visionRef.current.scrollIntoView() 
   //   console.log('in use effect')   
   // }, [refs.visionRef])
-
-  
 
   return (
     <div className="Home">

@@ -1,4 +1,4 @@
-h3{
+.register-h3{
     font-family: Roboto;
     font-size: 40px;
   }
@@ -23,7 +23,7 @@ h3{
   
   }
   
-  .title{
+  .register-title{
     color: black;
     font-size: xx-large;
     font-family: 'Petit Formal Script', cursive;
@@ -34,7 +34,7 @@ h3{
     font-style: bolder;
   }
   
-  .btnclass{
+  .register-btnclass{
     background-color: rgb(89,142,197);
     font-family: Roboto;
     height: 35px;
@@ -46,7 +46,7 @@ h3{
     font-size: large;
   }
   
-  body{
+  .register-body{
     /* background: linear-gradient(rgb(21, 27, 33),rgb(27, 87, 206)); */
     font-family: Roboto;
     /* height: 100%; */
@@ -55,27 +55,27 @@ h3{
     background-attachment: fixed;
   }
   
-  input{
+  .register-input{
      font-family: Roboto Arial, Helvetica, sans-serif;
   }
   
-  .labels{
+  .register-labels{
     font-family: cursive !important;
     font-size: large;
     text-align: left !important;
     font-weight: lighter;
   }
   
-  label{
+  .register-label{
     font-size: 20px;
   } 
   
-  h{
+  .h-register{
     font-family: 'Petit Formal Script';
     /* font-weight: bold; */
   }
   
-  .title1{
+  .register-title1{
     font-family: 'League Script';
     background: -webkit-linear-gradient(rgb(13, 41, 70),rgb(31, 50, 63),rgb(44, 90, 130));
     -webkit-background-clip: text;
@@ -83,7 +83,7 @@ h3{
     font-style: bolder;
   }
   
-  hr{
+  .hr-register{
     /* margin: 30px 0 !important;  */
     /* margin-top: 50px !important;
     margin-bottom: 30px; */
@@ -93,13 +93,13 @@ h3{
     border: none !important;
   }
 
-  a{
+  .a-register{
     font-family: Roboto !important;
     color: black !important;
     font-size: medium;
   }
 
-  a:hover{
+  .a-register:hover{
     opacity: 0.5 !important;
     
   }

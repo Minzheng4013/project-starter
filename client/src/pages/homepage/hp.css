@@ -2,18 +2,18 @@
 /* @import url('https://fonts.googleapis.com/css2?family=League+Script&family=Montserrat:ital@1&family=Open+Sans&family=Petit+Formal+Script&family=Poppins:ital,wght@1,600&family=Roboto:ital,wght@1,300&family=Shadows+Into+Light&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=League+Script&family=Noto+Serif:ital@1&family=Poppins:ital,wght@1,600&family=Roboto:ital,wght@1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petch:wght@500&family=Dancing+Script:wght@700&family=Inter&family=League+Script&family=Noto+Sans&family=Noto+Serif:ital@1&family=Poppins:ital,wght@1,600&display=swap'); 
-.title{
+.home-title{
   font-size: 30px;
   text-align:center;
 }
 
-.feature-title{
+.home-feature-title{
   font-size: 48px !important;
   /* font-family: none; */
   color:white;
   font-family: 'Petit Formal Script'!important;
 }
-body{
+.home-body{
   /* background: linear-gradient(rgb(89,142,197),rgb(148,194,227),rgb(192,219,242)); */
   /* height: 6000px; */
   /* background-; */
@@ -30,7 +30,7 @@ body{
   
 }
 
-.welcome-box{
+.home-welcome-box{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +82,7 @@ body{
   background-size: cover;
 }
 
-.welcome-text{
+.home-welcome-text{
   /* background:white; 
   color: black; */
   text-align: center;
@@ -99,54 +99,15 @@ body{
   color:white;
 } 
 
-.nav-link{
-  /* color: black !important;
-  font-weight: bold; */
-
-}
-
-.nav-link:hover{
+.home-nav-link:hover{
   text-decoration: underline !important;
 }
-.images{
+.home-images{
   display: flex;
   justify-content: space-between;
 }
 
-.profiles img{
-  /* border-radius: 0%; */
-  /* background-color: blue !important; */
-}
-
-/* h{
-  font-size:40px;
-  font-style: bolder;
-  font-family: 'League Script', cursive;
-  
-  font-family: 'Montserrat', sans-serif;
-  
-  font-family: 'Petit Formal Script', cursive;
-  font-family: 'Playfair Display', serif;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bolder;
-  color: lightblue;
-  font-size: 3em;
-  background: -webkit-linear-gradient(rgb(207, 195, 21), rgb(170, 103, 103));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
-
-/* h1, p{
-  font-family: 'Petit Formal Script', cursive;
-  color: lightpink;
-  font-size: 1.5em;
-  background: -webkit-linear-gradient(rgb(212, 28, 56), rgb(194, 109, 109));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-} */
-
-.vision, .who-we-are{  
+.home-vision, .home-who-we-are{  
   font-size: 60px;
   /* background: -webkit-linear-gradient(rgb(196, 196, 184), rgb(0, 221, 255),rgb(212, 52, 100));
     -webkit-background-clip: text;
@@ -154,9 +115,9 @@ body{
     font-family: 'Petit Formal Script', cursive;
     /* color: rgb(41,43,112); */
     color: brown;
-  
 }
-p{
+
+.home-p{
   /* font-family: 'Petit Formal Script' !important; */
   /* font-family: 'Poppins', sans-serif  */
   /* font-family: 'Noto Serif', serif !important; */
@@ -166,33 +127,30 @@ p{
   color:rgb(56,56,59);
 }
 
-.container{
+.home-container{
   text-align:center;
   background: none !important;
 }
-.rect{
-  text-align:center;
-}
 
-.values-box p{
+.home-values-box .home-p{
   font-size: 30px;
   /* height: 100px; */
 }
 
 
-.values-box{
+.home-values-box{
   padding: 1% 2%;
   /* background-color: rgb(21, 157, 241); */
 }
 
-.navbar{
+.home-navbar{
   /* background-color: black; */
   /* background:linear-gradient(rgb(89,142,197),rgb(148,194,227),rgb(192,219,242)); */
   background-color: white;
 
 }
 
-.heading-60{
+.home-heading-60{
   font-size: 60px !important;
   /* background: -webkit-linear-gradient(rgb(120, 120, 114), rgb(0, 140, 255),rgb(227, 206, 213));
     -webkit-background-clip: text;
@@ -200,10 +158,10 @@ p{
   color: black;
 }
 
-.heading-personal{
+.home-heading-personal{
   color: black;
 }
-.resources{
+.home-resources{
   /* background: linear-gradient(rgb(89,142,197),rgb(148,194,227),rgb(192,219,242)); */
   margin-top: 40px;
   font-size: 60px;
@@ -217,30 +175,21 @@ p{
   background: -webkit-linear-gradient(rgb(212, 28, 56), rgb(194, 109, 109));
 }
 
-/* 
-.img-special{
-  width: 10% !important;
-} */
-
-
-
-.feature-desc{
+.home-feature-desc{
   font-size: 20px !important;
   /* font-family: 'Noto Sans', sans-serif!important; */
   font-family: 'Inter', sans-serif;
-
 }
 
 
 
-.heading-name{
+.home-heading-name{
   font-size: 40px !important;
   /* background: -webkit-linear-gradient(rgb(196, 169, 17),rgb(190, 200, 210),rgb(7, 24, 33))!important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important; */
     color: black;
     font-family: "Petit Formal Script" !important; 
-  
 }
 
 
@@ -249,19 +198,13 @@ p{
   color: white;
 }
 
-/* button{
-  background: -webkit-linear-gradient(rgb(18, 20, 23),rgb(12, 147, 243),rgb(192,219,242));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
-
-.navbar-brand{
+.home-navbar-brand{
   background: -webkit-linear-gradient(rgb(116, 138, 190), rgb(76, 104, 152), rgb(228, 61, 61));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
 }
 
-.nav-item .nav-link{ 
+.home-nav-item .home-nav-link{ 
   background: -webkit-linear-gradient(black, black,black ) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -274,29 +217,33 @@ p{
   
 }
 
-.dropdown-item{
+.home-dropdown-item{
   background: none !important;
 }
 .logo{
   width: 78px;
 }
 
-.navbar{
+.home-navbar{
   padding: 8px 16px !important;
 }
 /* .fontchange{
   
 } */
-.ending, .aboutheading{
-/* font-family: "Petit Formal Script" !important;  */
-font-family: 'Chakra Petch', sans-serif;
-/* color: rgb(37, 150, 190); */
-/* color: rgb(4,116,244); */
-color: rgb(136,204,252);
-
-
+.home-ending{
+  /* font-family: "Petit Formal Script" !important;  */
+  font-family: 'Chakra Petch', sans-serif !important;
+  /* color: rgb(37, 150, 190); */
+  /* color: rgb(4,116,244); */
+  color: rgb(136,204,252);
 }
-.buttonend{
+
+.home-aboutheading{
+  font-family: 'Chakra Petch', sans-serif !important;
+  color:rgb(76, 104, 152);
+}
+
+.home-buttonend{
 font-family: 'Noto Sans', sans-serif;
  border-radius: 10px;
  padding: 10px 70px;
@@ -307,31 +254,31 @@ font-family: 'Noto Sans', sans-serif;
 }
 
 
-.company-container{
+.home-company-container{
   background-color:navajowhite;
 }
 
 
-.about-container{
+.home-about-container{
   background-color:lightskyblue;
   }
 
-.feature-container{
+.home-feature-container{
   padding: 5% 10% !important;
   /* background-color: rgb(223, 3, 3) !important; */
 }
 
-.features{
+.home-features{
   /* background:rgb(4,108,244) !important; */
   /* background-color: rgb(4, 140, 244); */
   background-color: lightskyblue;
 }
 
-.community-box{
+.home-community-box{
   padding: 5% 10%;
 }
 
-header{
+.home-header{
 /* background-color: rgb(0, 162, 255); */
 background: -webkit-linear-gradient(rgba(67,211,255),rgba(255,221,76),rgba(254,161,181));
 -webkit-background-clip: text;
