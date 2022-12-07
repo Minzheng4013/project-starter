@@ -5,6 +5,7 @@ import ErrorAlert from "../components/ErrorAlert";
 
 function MicroPostCard({ content, createdAt, id }) {
   const [likes, setLikes] = useState([]);
+  const [allComment, setAllComment] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
@@ -17,10 +18,9 @@ function MicroPostCard({ content, createdAt, id }) {
         }
       });
       let increaseLikes = await response.json();
-      setLikes(increaseLikes.likes_id);
+      setLikes(increaseLikes.likesCounter);
     } catch (error) {
       console.error("Error fetching all micro_posts", error);
-      setError(true);
     }
   }
 
@@ -33,10 +33,9 @@ function MicroPostCard({ content, createdAt, id }) {
         }
       });
       let decreaseLikes = await response.json();
-      setLikes(decreaseLikes.likes_id);
+      setLikes(decreaseLikes.likesCounter);
     } catch (error) {
       console.error("Error fetching all micro_posts", error);
-      setError(true);
     }
   }
 
@@ -54,7 +53,20 @@ function MicroPostCard({ content, createdAt, id }) {
         setError(true);
       }
     }
+    async function getAllComments() {
+      setLoading(true);
+      try {
+        let response = await fetch(`/api/comment_posts/${id}`);
+        let allCommentPost = await response.json();
+        setAllComment(allCommentPost);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching all micro_posts", error);
+        setError(true);
+      }
+    }
     getLikes();
+    getAllComments();
 
     return () => {
       // clean up function
@@ -71,6 +83,9 @@ function MicroPostCard({ content, createdAt, id }) {
           <h1>Likes: {likes}</h1>
           <button onClick={addLike}>Like</button>
           <button onClick={removeLike}>Remove Like</button>
+          {allComment.map((eachComment) => {
+          return eachComment.comment_content;
+        })}
         </div>
         <div className="card-footer small text-muted text-end">{createdAt}</div>
       </div>

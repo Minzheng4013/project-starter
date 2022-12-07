@@ -51,7 +51,7 @@ router.get("/totalLikes/:id", (req, res) => {
       return res.sendStatus(404);
     }
 
-    res.json(mpost.likes_id);
+    res.json(mpost.likesCounter);
   });
 });
 
@@ -61,7 +61,7 @@ router.put("/incrementLikes/:id", (req, res) => {
     if (!mpost) {
       return res.sendStatus(404);
     }
-    mpost.likes_id++; 
+    mpost.likesCounter++; 
     mpost
       .save()
       .then((updatedPost) => {
@@ -79,7 +79,7 @@ router.put("/decrementLikes/:id", (req, res) => {
     if (!mpost) {
       return res.sendStatus(404);
     }
-    mpost.likes_id--; 
+    mpost.likesCounter--; 
     mpost
       .save()
       .then((updatedPost) => {

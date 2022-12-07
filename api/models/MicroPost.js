@@ -13,8 +13,9 @@ module.exports = (sequelize, DataTypes) => {
           notEmpty: true,
         },
       },
-      likes_id: {
+      likesCounter: {
         type: DataTypes.INTEGER,
+        defaultValue: 0
       },
     },
     {
