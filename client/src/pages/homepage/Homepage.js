@@ -25,24 +25,26 @@ function Homepage() {
     aboutRef: useRef(null),
     featuresRef: useRef(null),
   }
-  let executeScroll = () => refs.visionRef.current.scrollIntoView()    
-  // executeScroll = null;
-  // useEffect(()=>{
-  //   executeScroll = () => refs.visionRef.current.scrollIntoView() 
-  //   console.log('in use effect')   
-  // }, [refs.visionRef])
+
+  const visionRef = useRef(null)
+
+  // let executeScroll = (ref) => () => {
+  //   refs[ref].current.scrollIntoView()   
+  // }
+
+  let scrollVision = () => visionRef?.current?.scrollIntoView()
+
+  useEffect(()=>console.log(visionRef.current), [visionRef])
 
   return (
     <div className="Home">
-      {/* <button onClick={executeScroll}></button> */}
-        <Navbar refs={refs} executeScroll={executeScroll}/>
-        <Welcome myRef={refs.welcomeRef}/>  
-        {/* <div ref={refs.visionRef}></div> */}
-        <CompanyInfo myRef={refs.visionRef}/>
+        <Navbar ref={visionRef}/>
+        <Welcome/>  
+        <CompanyInfo ref={visionRef}/>
         <div class="parallax"/>
-        <About myRef={refs.aboutRef}/>
+        <About/>
         <div class="parallax-2"/>
-        <Features myRef={refs.featuresRef}/>
+        <Features/>
         <Join/>
     </div>
   );

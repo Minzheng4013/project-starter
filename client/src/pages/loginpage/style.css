@@ -85,7 +85,7 @@ padding: 50px 10px;
 
 .login-picture{
   width: 600px;
-  height: 500px;
+  /* height: 500px; */
   opacity: 0.6;
 }
 

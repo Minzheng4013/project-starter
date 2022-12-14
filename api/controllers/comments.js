@@ -23,9 +23,9 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
   let { comment_content } = req.body;
-  let { post_id } = req.body.post_id;
+  let { post_id } = req.body;
 
-  Comment.create({ comment_content, post_id })
+  Comment.create({ comment_content, MicroPostId: post_id })
     .then((newPost) => {
       res.status(201).json(newPost);
     })
@@ -35,12 +35,7 @@ router.post("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  const { comment_id } = req.params;
-  Comment.findByPk(comment_id).then((mpost) => {
-    if (!mpost) {
-      return res.sendStatus(404);
-    }
-
+  Comment.findAll({where: {MicroPostId: req.params.id}}).then((mpost) => {
     res.json(mpost);
   });
 });

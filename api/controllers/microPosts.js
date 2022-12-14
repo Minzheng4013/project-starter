@@ -10,7 +10,7 @@ const { MicroPost } = db;
 //    POST   /api/micro_posts
 //    GET    /api/micro_posts/:id  Ex:http://localhost:8080/api/micro_posts/1
 //    PUT    /api/micro_posts/:id
-//    DELETE /api/micro_posts/:id
+//    DELETE /api/micro_posts/:id Ex:http://localhost:8080/api/micro_posts/totalLikes/1
 //
 // The full URL's for these routes are composed by combining the
 // prefixes used to load the controller files.
@@ -22,9 +22,10 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  let { content } = req.body;
+  let { content, firstName, lastName, email, is_anonymous } = req.body;
+  console.log("\n\ninside post create\n\n")
 
-  MicroPost.create({ content })
+  MicroPost.create({ content, firstName, lastName, email, is_anonymous })
     .then((newPost) => {
       res.status(201).json(newPost);
     })
@@ -51,7 +52,7 @@ router.get("/totalLikes/:id", (req, res) => {
       return res.sendStatus(404);
     }
 
-    res.json(mpost.likes_id);
+    res.json(mpost.likesCounter);
   });
 });
 
@@ -61,7 +62,7 @@ router.put("/incrementLikes/:id", (req, res) => {
     if (!mpost) {
       return res.sendStatus(404);
     }
-    mpost.likes_id++; 
+    mpost.likesCounter++; 
     mpost
       .save()
       .then((updatedPost) => {
@@ -79,7 +80,7 @@ router.put("/decrementLikes/:id", (req, res) => {
     if (!mpost) {
       return res.sendStatus(404);
     }
-    mpost.likes_id--; 
+    mpost.likesCounter--; 
     mpost
       .save()
       .then((updatedPost) => {

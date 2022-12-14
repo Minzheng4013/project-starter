@@ -1,9 +1,4 @@
 /* Add custom CSS here */
-.PostsListPage{
-  background: linear-gradient(rgb(89,142,197),rgb(148,194,227),rgb(192,219,242));
-  padding: 0px;
-  height: 1000px;
-}
 
 .feedTitle{
   font-family:'League Script';

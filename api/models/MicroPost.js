@@ -13,9 +13,26 @@ module.exports = (sequelize, DataTypes) => {
           notEmpty: true,
         },
       },
-      likes_id: {
+      likesCounter: {
         type: DataTypes.INTEGER,
+        defaultValue: 0
       },
+      is_anonymous: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0
+      },
+      firstName: {
+        type: DataTypes.STRING,
+        defaultValue: ""
+      },
+      lastName: {
+        type: DataTypes.STRING,
+        defaultValue: ""
+      },
+      email: {
+        type: DataTypes.STRING,
+        defaultValue: ""
+      }
     },
     {
       sequelize,

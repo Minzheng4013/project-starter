@@ -1,3 +1,4 @@
+import {useState, useEffect} from 'react';
 import Comments from "./Comments"
 
 const SingleComment = ({comment, replies, currentUserId, deleteComment}) =>{
@@ -6,7 +7,11 @@ const SingleComment = ({comment, replies, currentUserId, deleteComment}) =>{
   const canEditPost = currentUserId === comment.id && !timeElapsed;
   const timeLimitEdit = 600000; //10 minutes in milliseconds
   const timeElapsed = new Date() - new Date(comment.createdAt) > timeLimitEdit; //here we will see if time since post has been posted elapsed 10 minutes
-  const createdAt = new Date(comment.createdAt).toLocaleDateString();
+  
+
+
+  
+
 
 
   return(

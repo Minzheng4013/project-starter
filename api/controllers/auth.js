@@ -11,10 +11,14 @@ router.post("/signup", (req, res) => {
     password: req.body.password,
   })
     .then((user) => {
+      console.log("helo world\n")
+      console.log(user)
       user.password = undefined;
       req.login(user, () => res.status(201).json(user));
     })
     .catch((err) => {
+      console.log("helo error world\n")
+      console.log(err.message)
       res.status(400).json({ msg: "Failed Signup", err });
     });
 });

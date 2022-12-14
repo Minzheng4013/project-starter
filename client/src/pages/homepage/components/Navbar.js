@@ -1,10 +1,16 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function Navbar(props) {
+const Navbar = React.forwardRef((props, ref)=> {
     let [collapse, setCollapse] = useState(true)
+    const navigate = useNavigate()
     function onClickCollapse(){
       setCollapse(!collapse);
     }
+
+    useEffect(()=>console.log(ref.current), [ref])
+
+
     // const scrollHome = () => props.refs.homeRef.current.scrollIntoView()   
     // const scrollWelcome = () => props.refs.welcomeRef.current.scrollIntoView()   
     // const scrollVision = () => props.refs.visionRef.current.scrollIntoView()   
@@ -27,8 +33,11 @@ function Navbar(props) {
             <li className="nav-item home-nav-item active">
               <a className="nav-link home-nav-link" href="#">HOME</a>
             </li>
-            <li className="nav-item home-nav-item" onClick={()=>props.refs.visionRef.current.scrollIntoView()}>
-              <a className="nav-link home-nav-link" href="#">VISION</a>
+            <li className="nav-item home-nav-item" onClick={() => {
+              ref?.current?.scrollIntoView();
+              console.log(ref)
+              }}>
+              <a className="nav-link home-nav-link" href="#" >VISION</a>
             </li>
             <li className="nav-item home-nav-item">
               <a className="nav-link home-nav-link" href="#">ABOUT</a>
@@ -43,15 +52,15 @@ function Navbar(props) {
                 <a className="dropdown-item" href="#">Get Help</a>
               </div> */}
             {/* </li> */}
-            <li className="nav-item home-nav-item" ref={props.refs.visionRef}>
-              <a className="nav-link home-nav-link" href="#">LOGIN</a>
+            <li className="nav-item home-nav-item">
+              <a className="nav-link home-nav-link" href="#" onClick={()=>navigate("/login", {replace: true})}>LOGIN</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
     );
-  }
+  })
   
   export default Navbar;
   

@@ -1,3 +1,9 @@
+.post-feed{
+  background: linear-gradient(rgb(89,142,197),rgb(148,194,227),rgb(192,219,242));
+  padding: 0px;
+ 
+}
+
 .bar-title{
   font-family:'League Script';
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
@@ -30,7 +36,7 @@
   margin-bottom:30px;
 }
 
-/*button{
+button{
   margin-bottom: 35px;
   margin-top: 20px;
   background: linear-gradient(rgb(89,142,197),rgb(143, 188, 226));
@@ -40,7 +46,7 @@
   font-family: 'League Script';
   text-decoration-line:underline;
   font-weight: 600;
-}*/
+}
 
 .nav-pills .nav-link{
   background: 0.0;
@@ -76,7 +82,7 @@ ul{
 
 li{
   text-align: center;
-  
+  font-family:'League Script';
 }
 
 

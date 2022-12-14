@@ -1,6 +1,8 @@
-function CompanyInfo(props) {
+import React from "react";
+
+const CompanyInfo = React.forwardRef((props, ref) =>{
     return (
-        <div ref={props.myRef} className="container-fluid text-center home-values-box home-company-container">
+        <div ref={ref} className="container-fluid text-center home-values-box home-company-container">
             <div className="home-who-we-are">Who we are</div>
             <p className="home-p">We are the goto website to share your thoughts, depression, and get empathy.</p>
             <br/>
@@ -8,7 +10,7 @@ function CompanyInfo(props) {
             <p className="home-p">We see a world where everyone's thoughts are heard.</p>
         </div>
     );
-  }
+  })
   
   export default CompanyInfo;
   

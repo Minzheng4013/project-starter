@@ -1,11 +1,32 @@
-import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import ErrorAlert from "../components/ErrorAlert";
+import { GetUserContext } from "../userContext.js";
 
-function PostFormPage() {
+function PostFormPage(props) {
+  const navigate = useNavigate()
   const [content, setContent] = useState("");
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
+  const [is_anonymous, setIs_anonymous] = useState(0)
+
+  const user = GetUserContext().user
+  console.log(user)
+
+  let firstName = user?.firstName
+  let lastName = user?.lastName
+  let email = user?.email
+
+  // useEffect(()=>{
+  //   firstName = props.user.firstName
+  //   lastName = props.user.lastName
+  //   email = props.user.email
+  // }, [props.user])
+  
+  useEffect(()=>{
+    console.log(is_anonymous)
+  }, [is_anonymous])
+
 
   const handleContentChange = (event) => {
     setContent(event.target.value);
@@ -22,6 +43,10 @@ function PostFormPage() {
         },
         body: JSON.stringify({
           content: content,
+          firstName,
+          lastName,
+          email,
+          is_anonymous
         }),
       });
 
@@ -36,10 +61,10 @@ function PostFormPage() {
     }
   };
 
-  if (success) return <Navigate to="/" />;
+  if (success) return <Navigate to="/feed" />;
 
   return (
-    <div className="d-flex flex-row justify-content-center">
+    <div className="create-post create-background d-flex flex-row justify-content-center">
       {error && <ErrorAlert details={"Failed to save the content"} />}
       <form onSubmit={handleSubmit}>
         <div className="input-group">
@@ -47,14 +72,20 @@ function PostFormPage() {
             type="text"
             placeholder="Add a post here..."
             value={content}
-            className="form-control flex-grow"
+            className="post-new flex-grow"
             onChange={handleContentChange}
             autoFocus
           />
+          
           <div className="postFormButton">
             <button type="submit" className="btn btn-primary">
               Post
             </button>
+          </div>
+
+          <div className="col-12">
+            <label>anonymous</label>
+            <input type="checkbox" onClick={()=>setIs_anonymous((prev)=>prev?0:1)}></input>
           </div>
         </div>
       </form>

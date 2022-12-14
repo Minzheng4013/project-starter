@@ -1,0 +1,28 @@
+.postFormButton{
+  font-family:'League Script';
+}
+
+.create-post{
+  background-color: linear-gradient(rgb(89,142,197),rgb(148,194,227),rgb(192,219,242));
+}
+
+.new-post{
+  background-color:rgb(234, 229, 206);
+  text-align: justify;
+  color: black;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 680px;
+  height: 100px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 2px solid rgb(208, 204, 187);
+}
+
+.input-group{
+  margin-right: 600px;
+  width: 680px;
+  text-align: justify;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+  margin-right: 50px;
+}
