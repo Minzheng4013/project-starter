@@ -36,10 +36,10 @@ function PostFormPage() {
     }
   };
 
-  if (success) return <Navigate to="/" />;
+  if (success) return <Navigate to="/feed" />;
 
   return (
-    <div className="d-flex flex-row justify-content-center">
+    <div className="create-post create-background d-flex flex-row justify-content-center">
       {error && <ErrorAlert details={"Failed to save the content"} />}
       <form onSubmit={handleSubmit}>
         <div className="input-group">
@@ -47,7 +47,7 @@ function PostFormPage() {
             type="text"
             placeholder="Add a post here..."
             value={content}
-            className="form-control flex-grow"
+            className="post-new flex-grow"
             onChange={handleContentChange}
             autoFocus
           />

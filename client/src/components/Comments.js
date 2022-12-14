@@ -8,13 +8,16 @@ import CommentForm from './CommentForm';
  const Comment = ({ currentId }) => {
   const [backendComments, setBackendComments] = useState([]);
   const rootComments = backendComments.filter(backendComments => backendComments.parentID = null);
-
-  const getReplies = commentId => {
-    return backendComments.filter(backendComments => backendComments.parentID === commentId).sort((a,b) => new Date(a.createAt).getTime()-new Date(b.createAt).getTime())
-  };
+  const [allComment, setAllComment] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  // const getReplies = commentId => {
+  //   return backendComments.filter(backendComments => backendComments.parentID === commentId).sort((a,b) => new Date(a.createAt).getTime()-new Date(b.createAt).getTime())
+  // };
 
   const addComment = (text, parentID) => {
     console.log('addComment', text, parentID);
+    <Comments currentUserId={currentId}/>
   };
 
   const deleteComment = (commentId) => {
@@ -27,10 +30,21 @@ import CommentForm from './CommentForm';
   }
 
   //console.log('backendComments', backendComments); //to test to see if works in inspect then console
+
+  
   useEffect(() => {
-    /*getComments().then((data => {
-      setBackendComments(data);
-    }));*/
+    // async function getAllComments() {
+    //   setLoading(true);
+    //   try {
+    //     let response = await fetch(`/api/comment_posts/${currentId}`);
+    //     let allCommentPost = await response.json();
+    //     setAllComment(allCommentPost);
+    //     setLoading(false);
+    //   } catch (error) {
+    //     console.error("Error fetching all micro_posts", error);
+    //     setError(true);
+    //   }
+    // }
   }, []);
 
   return (
@@ -40,7 +54,7 @@ import CommentForm from './CommentForm';
       <CommentForm submitLabel="write" handleSubmit={addComment}/>
       <div className='comments-container'>
         {rootComments.map((rootComment) => (
-          <Comments key={rootComment.id} comments={rootComment} replies={getReplies(rootComment.id)}
+          <Comments key={rootComment.id} comments={rootComment}
           currentUserId={currentId}
           deleteComment={deleteComment}
           />
