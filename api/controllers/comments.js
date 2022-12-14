@@ -59,7 +59,7 @@ router.put("/:id", passport.isAuthenticated(), (req, res) => {
   });
 });
 
-router.delete("/:id", passport.isAuthenticated(), (req, res) => {
+router.delete("/:id", (req, res) => {
   const { id } = req.params;
   Comment.findByPk(id).then((mpost) => {
     if (!mpost) {
